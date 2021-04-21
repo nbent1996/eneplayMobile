@@ -66,7 +66,8 @@ android {
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.14.9'
 
         // latest release version
-        implementation 'com.tuya.smart:tuyasmart:3.20.0'
+        //implementation 'com.tuya.smart:tuyasmart:3.20.0'
+        implementation 'com.tuya.smart:tuyasmart:3.25.1'
 
         implementation 'com.tuya.smart:tuyasmart-shortcutparser:0.0.1'
         implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
@@ -111,6 +112,24 @@ android {
 
         //***** not required ****//
         implementation 'androidx.multidex:multidex:2.0.1'
+
+        //***AGREGADOS EL 20-4***//SEGUIR LOS LINEAMIENTOS DE ESTE LINK: https://developer.tuya.com/en/docs/app-development/android-bizbundle-sdk/integration?id=Ka8qhzk13vkfq
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-device_activator:3.25.2-2' //activator
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-panelmore:3.25.2-2' //DeviceDetailBizBundle
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-family:3.25.2-2' //FamilyBizBundle
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-feedback:3.25.2-2' //faq
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-camera:3.25.2-2' //ipc
+        api 'com.tuya.smart:tuyasmart-ipc-camera-sdk:3.25.0-open' //ipc_sdk
+        implementation 'com.tuya.smart:tuyasmart-lock-sdk:1.1.1' //lock_sdk
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-mall:3.25.2-2' //mall
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-message:3.25.2-2' //message
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-ota:3.25.2-2' //OTABizBundle
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-panel:3.25.2-2' //panel
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-scene:3.25.2-2' //scene
+        implementation 'com.tuya.smart:sweeper:2.0.1' //sweeper_sdk
+
+
+
         }
 }
 
