@@ -15,7 +15,7 @@
     <string name="action_settings">设置</string>
 
     <!-- 通用 -->
-    <string name="Confirm">确认</string>
+    <string name="confirm">确认</string>
     <string name="at_login_sns">社交账号登录</string>
     <string name="binding">绑定中&#046;&#046;</string>
     <string name="cancel_tip">知道了</string>
@@ -47,7 +47,6 @@
     <string name="gesture_password_input_limit">输入密码错误次数过多，请%d分钟后再试</string>
     <string name="gesture_password_input_new">输入新的手势密码</string>
     <string name="gesture_password_input_original">请输入原手势密码</string>
-    <string name="gesture_password_reset">是否重新设置手势密码？</string>
     <string name="gesture_password_set_successful">手势密码设置成功，请牢记</string>
     <string name="home_no_device">还没有添加设备</string>
     <string name="input_login_password">请输入登录密码</string>
@@ -213,7 +212,6 @@
     <string name="config_wifi">设备激活中</string>
     <string name="config_wifi_error">网关没有初始化</string>
     <string name="config_wifi_failure">请选择Wi-Fi热点</string>
-    <string name="confirm">确定</string>
     <string name="connect_phone_to_network">请确定手机已经连上Wi-Fi</string>
     <string name="connect_to_the_hotspot">连接热点</string>
     <string name="connect_to_the_hotspot_error">连接热点失败，查看是否密码输入正确</string>

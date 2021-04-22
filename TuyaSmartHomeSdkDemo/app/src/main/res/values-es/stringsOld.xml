@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <resources>
+    <!--
     <string name="app_name">Alfacom DEMO</string>
     <string name="ty_add_device_sort">Indique el tipo de dispositivo</string>
     <string name="family_add_name_check_tip">el apellido no puede estar vacío</string>
@@ -59,7 +62,7 @@
     <string name="ty_ez_status_success">Agregado exitosamente</string>
     <string name="ty_ez_status_share">Compartir con la familia</string>
     <string name="ty_ez_status_failed_android">No se pudo agregar</string>
-    <string name="ty_ez_select_all">Seleccionar todo</string>
+    <string name="ty_ez_select_all">Seleccionar todoo</string>
     <string name="ty_ez_search_failed">No se encontró ningún dispositivo para agregar</string>
     <string name="ty_ez_search_device">Buscar dispositivo</string>
     <string name="ty_ez_other_wifi">Usar otro Wi-Fi</string>
@@ -67,7 +70,7 @@
     <string name="ty_ez_init_help">Consulte la ayuda para obtener más detalles</string>
     <string name="ty_ez_help">Ver ayuda</string>
     <string name="ty_ez_finding">Descubrir dispositivo</string>
-    <string name="ty_ez_deselect">Deselecciona todo</string>
+    <string name="ty_ez_deselect">Deselecciona todoo</string>
     <string name="ty_ez_current_no_wifi">El teléfono no se conecta a Wi-Fi en este momento</string>
     <string name="ty_ez_current_wifi_android">Wi-Fi en estos momentos:</string>
     <string name="ty_ez_connecting_devicei_note1">El dispositivo se está conectando</string>
@@ -331,4 +334,6 @@
     <string name="ap_mode">Modo AP</string>
     <string name="ty_add_device_ez_info">Encienda el dispositivo y confirme que la luz instructora parpadea rápido</string>
     <string name="ty_add_device_ap_info">Encienda el dispositivo y confirme que la luz instructora parpadea lentamente</string>
+    -->
 </resources>
+

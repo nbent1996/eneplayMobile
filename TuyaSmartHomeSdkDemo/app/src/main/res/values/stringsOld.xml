@@ -1,4 +1,6 @@
 <resources>
+
+    <!--
     <array name="family_add_default_name_array">
         <item>living room</item>
         <item>master bedroom</item>
@@ -19,7 +21,7 @@
     <string name="ap_start">Start APConfig</string>
     <string name="offline">Off-line</string>
     <string name="IntranetControl">Online-Intranet</string>
-    <!-- 通用 -->
+
     <string name="OnlineControl">Online</string>
     <string name="Confirm">Confirm</string>
     <string name="at_login_sns">Sign in with social media account</string>
@@ -191,7 +193,7 @@
     <string name="ty_virtual_device_add_succ">Successfully add virtual device</string>
     <string name="ty_write_new_keyword">New password</string>
 
-    <!-- old -->
+    <!- old
     <string name="ty_write_old_keyword">Old password</string>
     <string name="about">About</string>
     <string name="action_back">Back</string>
@@ -430,7 +432,7 @@
     <string name="wpa2_must_with_eghit_characters">WPA2 passphrase length must be minimum 8
         characters
     </string>
-    <!-- 共享 -->
+    <!- 共享
     <string name="wpa_must_with_eghit_characters">WPA passphrase length must be minimum 8
         characters
     </string>
@@ -459,7 +461,7 @@
         symbols
     </string>
     <string name="ty_share_default_info">Enter mobile number/E-mail</string>
-    <!-- EZ配置 -->
+    <!- EZ配置
     <string name="ty_no_data">No data</string>
     <string name="ez_notSupport_5G">This app is supported only on 2.4GHz Wi-Fi channels</string>
     <string name="ez_notSupport_5G_change">Change</string>
@@ -526,7 +528,7 @@
         <![CDATA[<font color="#7ed321">Add successfully</font>]]></string>
     <string name="ty_ez_wifi_title">Set up the Wi-Fi for device</string>
 
-    <!-- 登录注册 -->
+    <!- 登录注册
     <string name="ty_offline_note">1. Whether device is powered on; \n2.Wi-Fi network is
         normal；\n3.Reset and re-add device
     </string>
@@ -543,7 +545,7 @@
     <string name="ty_login_sms">SMS verify and sign in</string>
     <string name="ty_login_sms_confirm">Sign in with SMS verfication</string>
 
-    <!-- 个人中心 -->
+    <!- 个人中心
     <string name="user_exists">The user has existed</string>
     <string name="mobile_binding">Bind mobile phone</string>
     <string name="mobile_binding_notsamecountry">Please enter the number with the same country as
@@ -679,18 +681,18 @@
     <string name="operation_failure">Operation failure</string>
 
 
-    <!-- 家庭管理 -->
+    <!- 家庭管理
     <string name="input_raw_value">please input RAW Type</string>
     <string name="family_empty_btn_text">add family</string>
 
-    <!-- 添加家庭 -->
+    <!- 添加家庭
     <string name="family_index_title">Family management</string>
     <string name="family_add_title">Add Family</string>
     <string name="family_add_family_name">Family Name</string>
     <string name="family_add_finish">finish</string>
     <string name="family_add_name_check_tip">family name can not be empty</string>
 
-    <!-- 家庭信息 -->
+    <!- 家庭信息
     <string name="family_add_room_check_tip">please choose room</string>
     <string name="family_info_title">Family Info</string>
     <string name="family_info_member_head_txt">family member</string>
@@ -735,10 +737,9 @@
     <string name="login_qr_app_info">Scan QR to login</string>
     <string name="login_qrlogin_pad_info">Need to log in with your phone</string>
     <string name="login_qrcode" >QR Code Login</string>
-
+-->
     <!-- AGREGADOS -->
-    <string name="texto_panel_devices" translatable="false">Ver estado</string>
-    <string name="home_my_device">Devices</string>
-    <string name="error_logueo">Access error, contact your operator.</string>
-
+    <!--<string name="texto_panel_devices" translatable="false">Ver estado</string>-->
+    <!--<string name="home_my_device">Devices</string>-->
+    <!--<string name="error_logueo">Access error, contact your operator.</string>-->
 </resources>
