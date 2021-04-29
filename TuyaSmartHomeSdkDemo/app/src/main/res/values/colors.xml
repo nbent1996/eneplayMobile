@@ -14,11 +14,11 @@
     <color name="line">#dbdbdb</color>
     <color name="colorNormal">#626262</color>
     <color name="edit_exit_title">#FF9B9B9B</color>
-    <color name="colorHighlight">#FF5800</color>
+    <color name="colorHighlight">#4d9b6e</color>
 
     <color name="color_primary_dark">#e54000</color>
     <color name="color_accent">#ffffa748</color>
-    <color name="color_navigationBar">#ff4800</color>
+    <color name="color_navigationBar">#4d9b6e</color>
     <color name="text_hint_color">#9b9b9b</color>
     <color name="text_color">#303030</color>
     <color name="text_color1">#626262</color>
@@ -60,7 +60,7 @@
     <color name="green">#69c94f</color>
     <color name="green_85">#D969c94f</color>
     <color name="green_80">#cc42c800</color>
-    <color name="orange_58">#ff5800</color>
+    <color name="orange_58">#4d9b6e</color>
 
     <color name="blue">#688ccc</color>
     <color name="blue_30">#8b9bba</color>
@@ -79,7 +79,7 @@
     <color name="status_font_color">#303030</color>
     <color name="status_bg_color">#FAFAFA</color>
     <color name="status_system_bg_color">#303030</color>
-    <color name="navbar_font_color">#ff5800</color>
+    <color name="navbar_font_color">#4d9b6e</color>
     <color name="navbar_bg_color">#FAFAFA</color>
     <color name="app_bg_color">#F2F2F2</color>
     <color name="colorDark">#303030</color>
@@ -89,14 +89,14 @@
     <color name="list_secondary_color">#9b9b9b</color>
     <color name="list_line_color">#dbdbdb</color>
     <color name="list_bg_color">#ffffff</color>
-    <color name="notice_font_color">#ff5800</color>
+    <color name="notice_font_color">#4d9b6e</color>
     <color name="notice_bg_color">#fff8d8</color>
     <color name="edit_friend_text_tip">#B0B0B0</color>
 
     <color name="primary_button_font_color">#ffffff</color>
-    <color name="primary_button_bg_color">#ff5800</color>
+    <color name="primary_button_bg_color">#4d9b6e</color>
     <color name="primary_button_select_color">#E54F00</color>
-    <color name="secondary_button_font_color">#ff5800</color>
+    <color name="secondary_button_font_color">#4d9b6e</color>
     <color name="secondary_button_bg_color">#ffffff</color>
     <color name="color_CC4600">#cc4600</color>
     <color name="color_bdbdbd">#bdbdbd</color>
