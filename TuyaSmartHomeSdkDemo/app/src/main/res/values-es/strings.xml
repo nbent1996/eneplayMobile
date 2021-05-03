@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">EnePlay HOME</string>
+    <string name="app_name">Eneplay Hogar</string>
     <string name="ty_add_device_sort">Indique el tipo de dispositivo</string>
     <string name="family_add_name_check_tip">el apellido no puede estar vacío</string>
     <string name="family_add_room_check_tip">por favor elige habitación</string>
