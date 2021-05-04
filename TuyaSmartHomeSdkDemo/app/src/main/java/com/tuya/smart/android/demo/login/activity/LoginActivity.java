@@ -52,7 +52,7 @@ public class LoginActivity extends BaseActivity implements ILoginView, TextWatch
     private static String metodo = "validarAcceso";
     private static String namespace = "http://WebServices/";
     private static String accionSoap = "http://WebServices/validarAcceso";
-    private static String url = "http://alfacomsrl.dyndns.org:8080/dashboard/IntegracionWebService?wsdl/";
+    private static String url = "http://eneplay.dyndns.org:8080/dashboard/IntegracionWebService?wsdl/";
     private static String usernameElegido = "";
     //private static boolean esMoroso = false;
     //private static boolean tareaFinalizada = false;
