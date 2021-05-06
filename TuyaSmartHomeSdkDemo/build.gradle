@@ -8,6 +8,9 @@ buildscript {
         maven {
             url "https://maven-other.tuya.com/repository/maven-releases/"
         }
+        maven{
+            url "https://jitpack.io"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'

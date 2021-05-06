@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.eneplay.platform"
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -52,7 +52,9 @@ android {
         doNotStrip '*/mips/*.so'
         doNotStrip '*/mips64/*.so'
     }
-
+    lintOptions {
+        abortOnError false
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -111,7 +113,11 @@ android {
 
         //***** not required ****//
         implementation 'androidx.multidex:multidex:2.0.1'
-        }
+
+        //Bizbundles
+        api 'com.tuya.smart:tuyasmart-bizbundle-message:3.25.2-2'
+        api 'com.tuya.smart:tuyasmart-bizbundle-feedback:3.25.2-2'
+    }
 }
 
 dependencies {

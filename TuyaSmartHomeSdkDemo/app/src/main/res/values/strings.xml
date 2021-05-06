@@ -741,4 +741,8 @@
     <string name="home_my_device">Devices</string>
     <string name="error_logueo">Access error, contact your operator.</string>
 
+    <string name="demo_message_through_activity">message center (start activity)</string>
+    <string name="demo_message_through_route">message center (route)</string>
+    <string name="demo_feedback_service">feedback(service)</string>
+    <string name="demo_feedback_route">feedback(route)</string>
 </resources>

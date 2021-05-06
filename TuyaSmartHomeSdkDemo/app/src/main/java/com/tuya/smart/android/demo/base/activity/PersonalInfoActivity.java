@@ -3,6 +3,7 @@ package com.tuya.smart.android.demo.base.activity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.demo.base.presenter.PersonalInfoPresenter;
@@ -10,6 +11,7 @@ import com.tuya.smart.android.demo.base.utils.DialogUtil;
 import com.tuya.smart.android.demo.base.utils.LoginHelper;
 import com.tuya.smart.android.demo.base.utils.ProgressUtil;
 import com.tuya.smart.android.demo.personal.IPersonalInfoView;
+import com.tuya.smart.wrapper.api.TuyaWrapper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -77,8 +79,10 @@ public class PersonalInfoActivity extends BaseActivity implements IPersonalInfoV
     @OnClick(R.id.btn_logout)
     public void logout() {
         ProgressUtil.showLoading(this, R.string.ty_logout_loading);
+        /*06/05/2021*/ TuyaWrapper.onLogout(this);
         mPersonalInfoPresenter.logout();
     }
+
 
     @Override
     public void reNickName(String nickName) {

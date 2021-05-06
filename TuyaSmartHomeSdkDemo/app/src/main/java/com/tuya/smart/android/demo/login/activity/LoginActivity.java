@@ -28,6 +28,7 @@ import com.tuya.smart.android.demo.base.utils.ToastUtil;
 import com.tuya.smart.android.demo.login.ILoginView;
 import com.tuya.smart.android.mvp.bean.Result;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
+import com.tuya.smart.wrapper.api.TuyaWrapper;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.SoapFault;
@@ -278,6 +279,7 @@ public class LoginActivity extends BaseActivity implements ILoginView, TextWatch
                 }
             }
             ProgressUtil.showLoading(LoginActivity.this, R.string.logining);
+            /*06/05/2021*/ TuyaWrapper.onLogin();
             mLoginPresenter.login(usernameElegido, mPassword.getText().toString());
         }
 

@@ -13,6 +13,12 @@ import android.widget.TextView;
 import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.demo.base.presenter.PersonalCenterFragmentPresenter;
 import com.tuya.smart.android.demo.personal.IPersonalCenterView;
+import com.tuya.smart.android.user.api.IQurryDomainCallback;
+import com.tuya.smart.api.MicroContext;
+import com.tuya.smart.api.router.UrlRouter;
+import com.tuya.smart.home.sdk.TuyaHomeSdk;
+import com.tuya.smart.message.base.activity.message.MessageContainerActivity;
+import com.tuyasmart.stencil.utils.ActivityUtils;
 
 /**
  * Created by letian on 16/7/18.
@@ -64,13 +70,35 @@ public class PersonalCenterFragment extends BaseFragment implements IPersonalCen
         mContentView.findViewById(R.id.rl_question).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoQuestionActivity();
+                TuyaHomeSdk.getUserInstance().queryDomainByBizCodeAndKey("help_center", "main_page", new IQurryDomainCallback() {
+                    @Override
+                    public void onSuccess(String domain) {
+                        UrlRouter.execute(UrlRouter.makeBuilder(getActivity(), "helpCenter"));
+                    }
+
+                    @Override
+                    public void onError(String code, String error) {
+                        return;
+                    }
+                });
             }
-        });
+            });
+
         mContentView.findViewById(R.id.rl_edit_person).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mPersonalCenterFragmentPresenter.gotoPersonalInfoActivity();
+            }
+        });
+        mContentView.findViewById(R.id.rl_messageCenter).setOnClickListener(new View.OnClickListener(){
+            @Override
+                    public void onClick(View v){
+                    /*Intent intent = new Intent(getActivity(), MessageActivity.class);
+                    getActivity().startActivity(intent);*/
+                com.tuyasmart.stencil.utils.ActivityUtils.gotoActivity(getActivity(),
+                        MessageContainerActivity.class,
+                        ActivityUtils.ANIMATE_SLIDE_TOP_FROM_BOTTOM,
+                        false);
             }
         });
         TypedArray a = getActivity().obtainStyledAttributes(new int[]{
@@ -80,10 +108,6 @@ public class PersonalCenterFragment extends BaseFragment implements IPersonalCen
             mContentView.findViewById(R.id.iv_head_photo).setBackgroundResource(portraitRes);
         }
         a.recycle();
-    }
-
-    private void gotoQuestionActivity() {
-
     }
 
     private void initPresenter() {

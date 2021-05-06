@@ -36,5 +36,40 @@
             <solid android:color="@color/color_bdbdbd"/>
         </shape>
     </item>
+    <!--AGREGADOS BIZBUNDLE-->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/mg_2" />
 
+            <solid android:color="@color/primary_button_select_color" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/mg_2" />
+
+            <solid android:color="@color/primary_button_select_color" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/mg_2" />
+
+            <solid android:color="@color/primary_button_select_color" />
+        </shape>
+    </item>
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/mg_2" />
+
+            <solid android:color="@color/primary_button_bg_color" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="@dimen/mg_2" />
+
+            <solid android:color="@color/gray_99" />
+        </shape>
+    </item>
 </selector>
