@@ -82,7 +82,8 @@ public class TuyaSmartApp extends MultiDexApplication {
             }
         });
         FrescoManager.initFresco(this);
-
+        //Device Details
+        //TuyaWrapper.registerService(AbsPanelMoreExpandService.class, new PanelMoreExpandServiceImpl());
     }
 
     public static String getProcessName(Context context) {

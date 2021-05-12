@@ -10,6 +10,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,12 +19,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.tuya.sdk.camera.presenter.TuyaHomeCameraManager;
 import com.tuya.smart.android.common.utils.L;
 import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.demo.base.utils.MessageUtil;
 import com.tuya.smart.android.demo.base.utils.ToastUtil;
 import com.tuya.smart.android.demo.camera.utils.Constants;
 import com.tuya.smart.android.demo.device.common.CommonDeviceDebugPresenter;
+import com.tuya.smart.api.router.UrlBuilder;
+import com.tuya.smart.api.router.UrlRouter;
 import com.tuya.smart.camera.camerasdk.typlayer.callback.AbsP2pCameraListener;
 import com.tuya.smart.camera.camerasdk.typlayer.callback.OnRenderDirectionCallback;
 import com.tuya.smart.camera.camerasdk.typlayer.callback.OperationDelegateCallBack;
@@ -33,6 +37,8 @@ import com.tuya.smart.camera.middleware.p2p.TuyaSmartCameraP2PFactory;
 import com.tuya.smart.camera.middleware.widget.AbsVideoViewCallback;
 import com.tuya.smart.camera.middleware.widget.TuyaCameraView;
 import com.tuya.smart.camera.utils.AudioUtils;
+import com.tuya.smart.home.sdk.TuyaHomeSdk;
+import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuyasmart.camera.devicecontrol.ITuyaCameraDevice;
 import com.tuyasmart.camera.devicecontrol.TuyaCameraDeviceControlSDK;
 import com.tuyasmart.camera.devicecontrol.bean.DpPTZControl;
@@ -67,7 +73,7 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
     private TuyaCameraView mVideoView;
     private ImageView muteImg;
     private TextView qualityTv;
-    private TextView speakTxt, recordTxt, photoTxt, replayTxt, settingTxt, cloudStorageTxt,messageCenterTxt;
+    private TextView speakTxt, recordTxt, photoTxt, replayTxt, settingTxt, cloudStorageTxt,messageCenterTxt, editarTxt;
 
     private static final int ASPECT_RATIO_WIDTH = 9;
     private static final int ASPECT_RATIO_HEIGHT = 16;
@@ -102,10 +108,10 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
                     handlesnapshot(msg);
                     break;
                 case MSG_VIDEO_RECORD_BEGIN:
-                    ToastUtil.shortToast(CameraPanelActivity.this, "record start success");
+                    ToastUtil.shortToast(CameraPanelActivity.this, "inicio de grabación exitoso");
                     break;
                 case MSG_VIDEO_RECORD_FAIL:
-                    ToastUtil.shortToast(CameraPanelActivity.this, "record start fail");
+                    ToastUtil.shortToast(CameraPanelActivity.this, "inicio de grabación fallido");
                     break;
                 case MSG_VIDEO_RECORD_OVER:
                     handleVideoRecordOver(msg);
@@ -123,33 +129,33 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
 
     private void handleStopTalk(Message msg) {
         if (msg.arg1 == ARG1_OPERATE_SUCCESS) {
-            ToastUtil.shortToast(CameraPanelActivity.this, "stop talk success" + msg.obj);
+            ToastUtil.shortToast(CameraPanelActivity.this, "dejar de hablar con éxito" + msg.obj);
         } else {
-            ToastUtil.shortToast(CameraPanelActivity.this, "operation fail");
+            ToastUtil.shortToast(CameraPanelActivity.this, "operación fallida");
         }
     }
 
     private void handleStartTalk(Message msg) {
         if (msg.arg1 == ARG1_OPERATE_SUCCESS) {
-            ToastUtil.shortToast(CameraPanelActivity.this, "start talk success" + msg.obj);
+            ToastUtil.shortToast(CameraPanelActivity.this, "empezar a hablar con éxito" + msg.obj);
         } else {
-            ToastUtil.shortToast(CameraPanelActivity.this, "operation fail");
+            ToastUtil.shortToast(CameraPanelActivity.this, "operación fallida");
         }
     }
 
     private void handleVideoRecordOver(Message msg) {
         if (msg.arg1 == ARG1_OPERATE_SUCCESS) {
-            ToastUtil.shortToast(CameraPanelActivity.this, "record success");
+            ToastUtil.shortToast(CameraPanelActivity.this, "iniciar a grabar con éxito");
         } else {
-            ToastUtil.shortToast(CameraPanelActivity.this, "operation fail");
+            ToastUtil.shortToast(CameraPanelActivity.this, "operacion fallida");
         }
     }
 
     private void handlesnapshot(Message msg) {
         if (msg.arg1 == ARG1_OPERATE_SUCCESS) {
-            ToastUtil.shortToast(CameraPanelActivity.this, "snapshot success");
+            ToastUtil.shortToast(CameraPanelActivity.this, "foto con éxito");
         } else {
-            ToastUtil.shortToast(CameraPanelActivity.this, "operation fail");
+            ToastUtil.shortToast(CameraPanelActivity.this, "operación fallida");
         }
     }
 
@@ -157,7 +163,7 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
         if (msg.arg1 == ARG1_OPERATE_SUCCESS) {
             muteImg.setSelected(previewMute == ICameraP2P.MUTE);
         } else {
-            ToastUtil.shortToast(CameraPanelActivity.this, "operation fail");
+            ToastUtil.shortToast(CameraPanelActivity.this, "operación fallida");
         }
     }
 
@@ -166,7 +172,7 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
         if (msg.arg1 == ARG1_OPERATE_SUCCESS) {
             qualityTv.setText(videoClarity == ICameraP2P.HD ? "HD" : "SD");
         } else {
-            ToastUtil.shortToast(CameraPanelActivity.this, "operation fail");
+            ToastUtil.shortToast(CameraPanelActivity.this, "operación fallida");
         }
     }
 
@@ -174,7 +180,7 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
         if (msg.arg1 == ARG1_OPERATE_SUCCESS) {
             preview();
         } else {
-            ToastUtil.shortToast(CameraPanelActivity.this, "connect fail");
+            ToastUtil.shortToast(CameraPanelActivity.this, "falló la conexión");
         }
     }
 
@@ -242,6 +248,7 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
         recordTxt = findViewById(R.id.record_Txt);
         photoTxt = findViewById(R.id.photo_Txt);
         replayTxt = findViewById(R.id.replay_Txt);
+        editarTxt = findViewById(R.id.editar_Txt);
         settingTxt = findViewById(R.id.setting_Txt);
         settingTxt.setOnClickListener(this);
         cloudStorageTxt = findViewById(R.id.cloud_Txt);
@@ -279,7 +286,7 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void showNotSupportToast() {
-        ToastUtil.shortToast(CameraPanelActivity.this, "device is not support!");
+        ToastUtil.shortToast(CameraPanelActivity.this, "el dispositivo no es soportado!");
     }
 
     private void preview() {
@@ -309,7 +316,7 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
         recordTxt.setOnClickListener(this);
         photoTxt.setOnClickListener(this);
         replayTxt.setOnClickListener(this);
-
+        editarTxt.setOnClickListener(this);
         cloudStorageTxt.setOnClickListener(this);
         messageCenterTxt.setOnClickListener(this);
     }
@@ -331,6 +338,17 @@ public class CameraPanelActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.photo_Txt:
                 snapShotClick();
+                break;
+            case R.id.editar_Txt:
+                UrlBuilder urlBuilder = new UrlBuilder(CameraPanelActivity.this, "panelMore");
+                String idDispositivo = this.devId;
+                DeviceBean deviceBean = TuyaHomeSdk.getDataInstance().getDeviceBean(idDispositivo);
+                Bundle bundle = new Bundle();
+                bundle.putString("extra_panel_dev_id",devId);
+                bundle.putString("extra_panel_name",deviceBean.getName());
+                //bundle.putLong("extra_panel_group_id",groupId);
+                urlBuilder.putExtras(bundle);
+                UrlRouter.execute(urlBuilder);
                 break;
             case R.id.replay_Txt:
                 Intent intent = new Intent(CameraPanelActivity.this, CameraPlaybackActivity.class);

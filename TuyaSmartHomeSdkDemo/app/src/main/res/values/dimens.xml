@@ -14,6 +14,7 @@
     <dimen name="tuya_title_size">17sp</dimen>
     <!-- 线条高宽控制 -->
     <dimen name="single_pix">1px</dimen>
+    <dimen name="ten_pix">10px</dimen>
     <dimen name="double_pix">2px</dimen>
     <dimen name="lose_pix">-1px</dimen>
 

@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
     defaultConfig {
         applicationId "com.eneplay.platform"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -117,10 +117,12 @@ android {
         //Bizbundles
         api 'com.tuya.smart:tuyasmart-bizbundle-message:3.25.2-2'
         api 'com.tuya.smart:tuyasmart-bizbundle-feedback:3.25.2-2'
+        api 'com.tuya.smart:tuyasmart-bizbundle-panelmore:3.25.2-2'
     }
 }
 
 dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     implementation project(path: ':ksoap2-android-assembly-3.4.0-jar-with-dependencies')
+    implementation 'com.facebook.soloader:soloader:0.9.0+'
 }

@@ -20,7 +20,7 @@
             android:drawablePadding="@dimen/mg_5"
             android:gravity="center"
             android:padding="@dimen/mg_20"
-            android:text="speak"
+            android:text="hablar"
             android:textColor="@color/camera_panel_control_color"
             android:textSize="@dimen/ts_13" />
 
@@ -35,7 +35,7 @@
             android:drawablePadding="@dimen/mg_5"
             android:gravity="center"
             android:padding="@dimen/mg_20"
-            android:text="photo"
+            android:text="foto"
             android:textColor="@color/camera_panel_control_color"
             android:textSize="@dimen/ts_13" />
 
@@ -49,7 +49,7 @@
             android:drawablePadding="@dimen/mg_5"
             android:gravity="center"
             android:padding="@dimen/mg_20"
-            android:text="record"
+            android:text="grabar"
             android:textColor="@color/camera_panel_control_color"
             android:textSize="@dimen/ts_13" />
     </LinearLayout>
@@ -69,7 +69,7 @@
             android:drawablePadding="@dimen/mg_5"
             android:gravity="center"
             android:padding="@dimen/mg_20"
-            android:text="replay"
+            android:text="reproducir"
             android:textColor="@color/camera_panel_control_color"
             android:textSize="@dimen/ts_13" />
 
@@ -81,7 +81,7 @@
             android:drawableTop="@drawable/camera_icon_playback_selector"
             android:gravity="center"
             android:padding="@dimen/mg_20"
-            android:text="cloud storage"
+            android:text="almacenaje externo"
             android:textColor="@color/camera_panel_control_color" />
 
         <TextView
@@ -94,7 +94,7 @@
             android:drawablePadding="@dimen/mg_5"
             android:gravity="center"
             android:padding="@dimen/mg_20"
-            android:text="message"
+            android:text="mensajes"
             android:textColor="@color/camera_panel_control_color"
             android:textSize="@dimen/ts_13" />
 
@@ -112,9 +112,20 @@
             android:layout_weight="1"
             android:drawableTop="@drawable/camera_icon_arrow"
             android:gravity="center"
-            android:text="setting"
+            android:text="control PTZ"
             android:textColor="@color/camera_panel_control_color" />
 
+        <TextView
+            android:id="@+id/editar_Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/uispecs_menu_setting"
+            android:drawablePadding="@dimen/ten_pix"
+            android:gravity="center"
+            android:padding="@dimen/mg_20"
+            android:text="editar dispositivo"
+            android:textColor="@color/camera_panel_control_color" />
     </LinearLayout>
 
 </LinearLayout>
