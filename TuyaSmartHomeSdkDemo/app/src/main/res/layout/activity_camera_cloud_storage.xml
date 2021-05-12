@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:gravity="center_vertical"
         app:navigationIcon="@drawable/tysmart_back"
-        app:title="CloudStorage"
+        app:title="Almacenamiento en la Nube"
         app:titleTextColor="@color/black" />
 
     <RelativeLayout
@@ -44,7 +44,7 @@
         android:layout_below="@+id/camera_video_view_Rl"
         android:layout_marginLeft="@dimen/mg_10"
         android:layout_marginRight="@dimen/mg_10"
-        android:text="Cloud Storage Status"
+        android:text="Estado de almacenamiento en la nube"
         android:textColor="@color/white"
         android:textSize="15sp" />
 

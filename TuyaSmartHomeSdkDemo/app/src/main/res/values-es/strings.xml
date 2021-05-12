@@ -331,4 +331,9 @@
     <string name="ap_mode">Modo AP</string>
     <string name="ty_add_device_ez_info">Encienda el dispositivo y confirme que la luz instructora parpadea rápido</string>
     <string name="ty_add_device_ap_info">Encienda el dispositivo y confirme que la luz instructora parpadea lentamente</string>
+    <string name="ty_ap_connect_description">Abra en su teléfono la configuración WLAN y conéctese a la red Wi-fi</string>
+    <string name="ty_scene_device">Dispositivo</string>
+    <string name="ty_add_device_find_dev">Buscar dispositivo</string>
+    <string name="ty_add_device_reg_cloud">Registrar dispositivo en la nube</string>
+    <string name="ty_add_device_initialize">Inicializar dispositivo</string>
 </resources>

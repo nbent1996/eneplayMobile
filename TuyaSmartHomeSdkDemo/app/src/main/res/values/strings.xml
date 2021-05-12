@@ -321,7 +321,7 @@
     <string name="loading">Loading</string>
     <string name="login_China">China</string>
     <string name="login_USA">United States of America</string>
-    <string name="login_choose_country">Country / Region</string>
+    <string name="login_choose_country">País / Región</string>
     <string name="login_get_code">get</string>
     <string name="login_now">Start</string>
     <string name="login_reget_code">Retry</string>
@@ -360,7 +360,7 @@
     <string name="personal_center">Profile</string>
     <string name="phone_number">Phone Number</string>
     <string name="phone_number_is_not_correct">Incorrect phone number</string>
-    <string name="please_choose_country_first">Country / Region</string>
+    <string name="please_choose_country_first">País / Región</string>
     <string name="please_connect_to_wifi">Please connect to Wi-Fi</string>
     <string name="please_input_password">Please input password</string>
     <string name="point_out">Notification</string>

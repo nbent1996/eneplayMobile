@@ -53,7 +53,8 @@
         android:gravity="center"
         android:text="@string/texto_panel_devices"
         android:textColor="@color/black"
-        android:textSize="@dimen/mg_20" />
+        android:textSize="@dimen/mg_20"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:id="@+id/list_background_tip"

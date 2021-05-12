@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:gravity="center_vertical"
         app:navigationIcon="@drawable/tysmart_back"
-        app:title="Playback"
+        app:title="Reproducir"
         app:titleTextColor="@color/black" />
 
     <RelativeLayout
@@ -68,7 +68,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Query Date:"
+            android:text="Fecha de grabación:"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -90,7 +90,7 @@
         android:layout_below="@+id/query_ll"
         android:layout_marginLeft="@dimen/mg_10"
         android:layout_marginRight="@dimen/mg_10"
-        android:text="query"
+        android:text="consulta"
         android:textColor="@color/white"
         android:textSize="15sp" />
 
@@ -106,38 +106,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="#4d9b6e"
         android:orientation="horizontal"
+        android:gravity="center_horizontal"
         android:padding="@dimen/mg_10">
 
         <Button
             android:id="@+id/start_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
-            android:text="start"
+            android:background="@drawable/ic_play_to_pause"
+            android:backgroundTint="#595959"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
         <Button
             android:id="@+id/pause_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
-            android:text="pause"
+            android:background="@drawable/ic_pause_to_play"
+            android:backgroundTint="#595959"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
         <Button
             android:id="@+id/resume_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="resume"
+            android:layout_width="52dp"
+            android:layout_height="48dp"
+            android:background="@drawable/resumebtngris"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
         <Button
             android:id="@+id/stop_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
-            android:text="stop"
+            android:background="@drawable/ic_stop_vector"
+            android:backgroundTint="#595959"
             android:textColor="@color/white"
             android:textSize="15sp" />
     </LinearLayout>

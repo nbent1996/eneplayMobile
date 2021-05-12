@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:gravity="center_vertical"
         app:navigationIcon="@drawable/tysmart_back"
-        app:title="Camera"
+        app:title="Cámara"
         app:titleTextColor="@color/black" />
 
     <RelativeLayout
